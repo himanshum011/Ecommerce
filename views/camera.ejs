@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cameras</title>
+	<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="laptop.css">
+
+<link rel="stylesheet" type="text/css" href="overflow.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="pr3.css">
+</head>
+<body>
+	<div class="container-fluid cf1">
+			<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">TechZone</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="laptops">Laptops</a></li>
+      <li><a href="mobile">Phones</a></li>
+      <li class="active"><a href="camera">Cameras</a></li>
+      
+    </ul>
+  </div>
+</nav>
+  
+
+<div class="camera" id="camera">
+  <div class="jumbotron">
+    <h1>DSLR Cameras</h1>
+    <p>We have made a list of some of the best cameras based on specifications,features and clarity.These cameras are by trusted brands such as Nikon,Canon,Sony,etc.We also have some cost-effective cameras. </p>
+  </div>
+  <div class="row">
+    <div class="col-sm-9">
+      <% for(var i=0;i<data.length;i++){ %>
+    <div class="col-sm-4" style="border:1px solid black; height:450px;">
+      <img style="width:100%" src= <%=data[i].imageSource %> />
+      <h3 class="text-center"><%=data[i].productname%></h3>
+      <p class="text-center"><%=data[i].productspec%></p>
+      <h4 class="text-center"><%=data[i].price%></h4>
+      <div class="col-sm-12 abc">
+      <button class="btn btn-info" onclick="myfunction(this);">Add To Cart</button></div>
+    </div>
+    <%}%>
+  </div>
+   <div class="col-sm-3 abx">
+      <h1 class="text-center">Cart</h1>
+      <div id="kart">
+      </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="script4.js"></script>
+
+</body>
+</html>
